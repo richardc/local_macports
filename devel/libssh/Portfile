@@ -6,12 +6,14 @@ PortGroup           cmake 1.0
 
 name                libssh
 epoch               1
-version             0.5.5
+version             0.6.0
 set major           [join [lrange [split ${version} .] 0 1] .]
 categories          devel security net
 platforms           darwin
 maintainers         cal openmaintainer
 license             LGPL-2.1
+
+use_xz              yes
 
 description         an SSH library
 
@@ -20,10 +22,11 @@ long_description    The ssh library was designed to be used by \
                     by the mean of a library.
 
 homepage            http://www.libssh.org
-master_sites        https://red.libssh.org/attachments/download/51
+master_sites        https://red.libssh.org/attachments/download/71
 
-checksums           rmd160  4b1dcb9c5a61b059d5094803bd4a2391a9607f87 \
-                    sha256  c0df0f05fc812dbe26fd4118bec0776aa9e892c0719590f3971130489c6b8e9d
+
+checksums           rmd160  c31f0d67539505e0a7fecb8fba5efca79846b3a1 \
+                    sha256  4c6de7caa23debbe4639f83fa2ff411924643e65356d6af048daa31e4a1a2f71
 
 depends_lib         port:openssl \
                     port:zlib
